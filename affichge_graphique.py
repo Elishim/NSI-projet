@@ -1,5 +1,5 @@
 '''
-Eliot Finez 1A
+E F 1A
 Projet NSI
 TSP
 '''
