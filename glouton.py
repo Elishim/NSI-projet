@@ -99,7 +99,7 @@ def plotting_ville(Liste, dist):
         plt.scatter(Liste[i][1],Liste[i][2], color='black')
         plt.text(Liste[i][1],Liste[i][2],Liste[i][0], color='black', fontsize=12)
         plt.plot([Liste[i][1],Liste[i+1][1]],[Liste[i][2],Liste[i+1][2]], color='blue')
-    plt.title("Le chemin le plus cour reliant toutes les villes fait : "+str(round(dist,3)))
+    plt.title("Ce chemin reliant toutes les villes mesure", str(round(dist,3)), "km.")
     plt.show()
     return None
 
