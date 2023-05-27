@@ -1,7 +1,7 @@
 import math as m
 import matplotlib.pyplot as plt
 
-MAX_NB_VILLES = 500
+MAX_NB_VILLES = 80
 
 '''
 Petit fichier test fait par mes soins :
