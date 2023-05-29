@@ -42,6 +42,7 @@ z 8 -8
 def litEntree():
     """
     lit le nombre de villes, leur nom et leurs coordonnées
+    renvoie le nombre des villes, le tableau de leur coordonnées, un tableau avec les noms des villes, un tableau contenant les distances entre toutes les paires de villes
     """
 
     dist = [[0 for _ in range(MAX_NB_VILLES)] for _ in range(MAX_NB_VILLES)]
@@ -92,7 +93,7 @@ def plotting_ville(Liste, dist):
     '''
     Parametre : Un liste de tuples sous la forme : (Nom de la ville , X , Y ) avec x et y des floats et le Nom de la ville un str 
     exemple de liste : [('Tokyo',1,2),('Paris',4,6),('New-York',9,-3),('Malaga',6,-8)]
-    Renvoie : None , affiche dans un plan les villes via la bibliotheque matplotlib .
+    Renvoie : None , crée un graphique reliant les villes via la bibliotheque matplotlib .
     '''
     Liste.append(Liste[0])
     for i in range(len(Liste)-1):
@@ -104,6 +105,11 @@ def plotting_ville(Liste, dist):
     return None
 
 def afficheRes(res, noms,coord):
+    """
+    prend en paramètre un tuple contenant l'ordre des villes et la distace totale, le tableau de noms des villes et le tableau des coordonnées des villes
+    affiche le résultat de l'algorithme
+    ne renvoie rien
+    """"
     dist = res[1]
     ordre = res[0]
     itineraire = []
@@ -114,6 +120,9 @@ def afficheRes(res, noms,coord):
 
         
 def main():
+    """
+    fonction principale
+    """
     nbV, coord, noms, dist = litEntree()
     res = glouton(nbV, coord, dist)
     afficheRes(res,noms,coord)
