@@ -121,7 +121,7 @@ def afficheRes(res, noms,coord):
         
 def main():
     """
-    fonction principale
+    fonction principale, ne prend pas de paramètre et ne renvoie rien
     """
     nbV, coord, noms, dist = litEntree()
     res = glouton(nbV, coord, dist)
