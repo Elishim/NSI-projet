@@ -109,7 +109,7 @@ def afficheRes(res, noms,coord):
     prend en paramètre un tuple contenant l'ordre des villes et la distace totale, le tableau de noms des villes et le tableau des coordonnées des villes
     affiche le résultat de l'algorithme
     ne renvoie rien
-    """"
+    """
     dist = res[1]
     ordre = res[0]
     itineraire = []
