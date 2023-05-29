@@ -78,7 +78,7 @@ def glouton(nbV, coord, dist):
         prec = chem[idV-1]
         mini = 1000000000
         num = -1
-        for prochain in range(nbV):
+        for prochain in range(nbV):         #trouve la ville la plus proche pas encore choisie
             if (not pris[prochain]):
                 if (dist[prec][prochain] < mini):
                     mini = dist[prec][prochain]
